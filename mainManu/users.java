@@ -29,7 +29,7 @@ public class users {
         double istenenKg;
 
         String sele = "";
-        System.out.println("<-- Kasap Urulerinin Listesi -->");
+        System.out.println("<-- Manav Urulerinin Listesi -->");
         System.out.println("No Urun    Fiyat" + "\n-- ------- -----");
         for (int i = 0; i < manavUrunler.size(); i++) {
             System.out.print((i + 1) + " " + manavUrunler.get(i) + " " + manavFiyatlar.get(i) + " TL");

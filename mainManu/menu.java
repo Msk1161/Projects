@@ -41,6 +41,7 @@ public class menu {
                     sifreGir=scan.next().toLowerCase();
                     if (sifreGir.equals("admin")){
                         System.out.println("Sifre Dogru");
+                        admin.menuUrunEkle();
                     } else System.out.println("Sifre yanlis, tekrar deneyiniz");
                 }while (!sifreGir.equals("admin"));
 
@@ -54,14 +55,14 @@ public class menu {
     }
     public static void bolumSec() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Menu");
+        System.out.println("Menu SATIS");
         System.out.println("---------------");
         System.out.println("1  Manav");
         System.out.println("2  Sarkuteri");
         System.out.println("3  Market");
         System.out.println("4  Kasap");
         System.out.println("== ===========");
-        System.out.print("Lutfen, menuden secmek istediginiz bolumun numarasini giriniz : ");
+        System.out.print("Lutfen, SATIS icin secmek istediginiz bolumun numarasini giriniz : ");
 
 
         int menu = scan.nextInt();
