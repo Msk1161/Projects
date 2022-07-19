@@ -71,10 +71,7 @@ public class sayiBulmaOyunu {
                 }
             }
         }while(arti<4);
-
-
     }
-
     private static void sayiUret() {
         Random rnd=new Random();
         int low=1000;
@@ -106,9 +103,7 @@ public class sayiBulmaOyunu {
             } else {
                 test=0;
             }
-
         }while (test<4);
-
-    }
+   }
 
 }

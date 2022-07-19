@@ -1,8 +1,8 @@
-package mainManu;
+package Marketting;
 
 import java.util.Scanner;
 
-import static mainManu.menu.*;
+import static Marketting.menu.*;
 
 public class admin {
     public static void main(String[] args) {
