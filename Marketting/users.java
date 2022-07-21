@@ -9,19 +9,13 @@ public class users {
     public static void main(String[] args) {
         bolumSec();
         user();
-
-
-
-
     }
-
-
 
     public static void user() {
         bolumSec();
     }
 
-    public static void manav(int menu) {
+    public static void manav(String menu) {
         Scanner scan = new Scanner(System.in);
         String evethayir = "";
         int urunNo = 0;
@@ -30,10 +24,10 @@ public class users {
 
         String sele = "";
         System.out.println("<-- Manav Urulerinin Listesi -->");
-        System.out.println("No Urun    Fiyat" + "\n-- ------- -----");
+        System.out.println("No  Urun     Fiyat" + "\n-- ------- -----");
         for (int i = 0; i < manavUrunler.size(); i++) {
-            System.out.print((i + 1) + " " + manavUrunler.get(i) + " " + manavFiyatlar.get(i) + " TL");
-            System.out.println("");
+            System.out.printf("%-3d %-8s %-5.2f TL\n",(i + 1),manavUrunler.get(i), manavFiyatlar.get(i));
+
         }
         for (int i = 1; i <= 2; i++) {
             System.out.print("Almak istediginiz urunun, urun No'sunu giriniz : ");
@@ -54,7 +48,8 @@ public class users {
         istenenKg = scan.nextDouble();
         toplam = toplam + (kgFiyati * istenenKg);
         sele = sele + istenenKg + " Kg " + urunAdi + " :" + toplam + " TL";
-        System.out.println(istenenKg + " Kg " + urunAdi + " :" + toplam + " TL");
+        System.out.printf("%-5.2f %-8s %-5.2f TL\n",istenenKg, urunAdi, toplam);
+        //System.out.println("");
 
         genelToplam= genelToplam +toplam;
         sepet = sepet + "\n" + sele;
@@ -67,11 +62,11 @@ public class users {
         } else {
             System.out.print(" Alinan urunler : " + "\n" + "________________" + sepet + " TL");
             System.out.println("");
-            System.out.println("Toplam tutar : " + genelToplam + " TL");
+            System.out.printf("Toplam tutar : %-5.2f TL\n", genelToplam );
 
         }
         }
-    public static void sarkuteri(int menu) {
+    public static void sarkuteri(String menu) {
         Scanner scan = new Scanner(System.in);
         String evethayir = "";
         int urunNo = 0;
@@ -80,10 +75,10 @@ public class users {
 
         String sele = "";
         System.out.println("<-- Sarkuteri Urulerinin Listesi -->");
-        System.out.println("No Urun    Fiyat" + "\n-- ------- -----");
+        System.out.println("No  Urun     Fiyat" + "\n-- ------- -----");
         for (int i = 0; i <sarkuteriUrunler.size() ; i++) {
-            System.out.print((i+1)+" " + sarkuteriUrunler.get(i)+" "+sarkuteriFiyatlar.get(i)+" TL");
-            System.out.println("");
+            System.out.printf("%-3d %-8s %-5.2f TL\n",(i+1), sarkuteriUrunler.get(i),sarkuteriFiyatlar.get(i));
+
         }
 
         for (int i = 1; i <= 2; i++) {
@@ -105,7 +100,7 @@ public class users {
         istenenKg = scan.nextDouble();
         toplam = toplam + (kgFiyati * istenenKg);
         sele = sele + istenenKg + " Kg " + urunAdi + " :" + toplam + " TL";
-        System.out.println(istenenKg + " Kg " + urunAdi + " :" + toplam + " TL");
+        System.out.printf("%-5.2f %-8s %-5.2f TL\n",istenenKg, urunAdi, toplam);
 
         genelToplam= genelToplam +toplam;
         sepet = sepet + "\n" + sele;
@@ -118,12 +113,12 @@ public class users {
         } else {
             System.out.print(" Alinan urunler : " + "\n" + "________________" + sepet + " TL");
             System.out.println("");
-            System.out.println("Toplam tutar : " + genelToplam + " TL");
+            System.out.printf("Toplam tutar : %-5.2f TL\n", genelToplam );
 
         }
 
     }
-    public static void market(int menu) {
+    public static void market(String menu) {
         Scanner scan = new Scanner(System.in);
         String evethayir = "";
         int urunNo = 0;
@@ -132,10 +127,10 @@ public class users {
 
         String sele = "";
         System.out.println("<-- Market Urulerinin Listesi -->");
-        System.out.println("No Urun    Fiyat" + "\n-- ------- -----");
+        System.out.println("No  Urun     Fiyat" + "\n-- ------- -----");
         for (int i = 0; i <marketUrunler.size() ; i++) {
-            System.out.print((i+1)+" " + marketUrunler.get(i)+" "+marketFiyatlar.get(i)+" TL");
-            System.out.println("");
+            System.out.printf("%-3d %-8s %-5.2f TL\n",(i+1), marketUrunler.get(i),marketFiyatlar.get(i));
+
         }
 
         for (int i = 1; i <= 2; i++) {
@@ -157,7 +152,7 @@ public class users {
         istenenKg = scan.nextDouble();
         toplam = toplam + (kgFiyati * istenenKg);
         sele = sele + istenenKg + " Kg " + urunAdi + " :" + toplam + " TL";
-        System.out.println(istenenKg + " Kg " + urunAdi + " :" + toplam + " TL");
+        System.out.printf("%-5.2f %-8s %-5.2f TL\n",istenenKg, urunAdi, toplam);
 
         genelToplam= genelToplam +toplam;
         sepet = sepet + "\n" + sele;
@@ -170,12 +165,12 @@ public class users {
         } else {
             System.out.print(" Alinan urunler : " + "\n" + "________________" + sepet + " TL");
             System.out.println("");
-            System.out.println("Toplam tutar : " + genelToplam + " TL");
+            System.out.printf("Toplam tutar : %-5.2f TL\n", genelToplam );
 
         }
 
     }
-    public static void kasap(int menu) {
+    public static void kasap(String menu) {
         Scanner scan = new Scanner(System.in);
         String evethayir = "";
         int urunNo = 0;
@@ -186,8 +181,8 @@ public class users {
         System.out.println("<-- Kasap Urulerinin Listesi -->");
         System.out.println("No Urun    Fiyat" + "\n-- ------- -----");
         for (int i = 0; i <kasapUrunler.size() ; i++) {
-            System.out.print((i+1)+" " + kasapUrunler.get(i)+" "+kasapFiyatlar.get(i)+" TL");
-            System.out.println("");
+            System.out.printf("%-3d %-8s %-5.2f TL\n",(i+1), kasapUrunler.get(i),kasapFiyatlar.get(i));
+
         }
 
         for (int i = 1; i <= 2; i++) {
@@ -209,7 +204,7 @@ public class users {
         istenenKg = scan.nextDouble();
         toplam = toplam + (kgFiyati * istenenKg);
         sele = sele + istenenKg + " Kg " + urunAdi + " :" + toplam + " TL";
-        System.out.println(istenenKg + " Kg " + urunAdi + " :" + toplam + " TL");
+        System.out.printf("%-5.2f %-8s %-5.2f TL\n",istenenKg, urunAdi, toplam);
 
         genelToplam= genelToplam +toplam;
         sepet = sepet + "\n" + sele;
@@ -222,7 +217,7 @@ public class users {
         } else {
             System.out.print(" Alinan urunler : " + "\n" + "________________" + sepet + " TL");
             System.out.println("");
-            System.out.println("Toplam tutar : " + genelToplam + " TL");
+            System.out.printf("Toplam tutar : %-5.2f TL\n", genelToplam );
 
         }
 

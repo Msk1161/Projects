@@ -17,7 +17,7 @@ public class menu {
     //static String sifre="admin";
     static String sepet="";
     static double genelToplam=0;
-    static int menu=0;
+    static String menu="";
 
 
     public static void main(String[] args) {
@@ -65,14 +65,14 @@ public class menu {
         System.out.print("Lutfen, SATIS icin secmek istediginiz bolumun numarasini giriniz : ");
 
 
-        int menu = scan.nextInt();
-        if (menu == 1) {
+        String menu = scan.nextLine();
+        if (menu.equals("1")) {
             users.manav(menu);
-        } else if (menu == 2) {
+        } else if (menu.equals("2")) {
             users.sarkuteri(menu);
-        } else if (menu == 3) {
+        } else if (menu.equals("3")) {
             users.market(menu);
-        } else if (menu == 4) {
+        } else if (menu.equals("4")) {
             users.kasap(menu);
         } else {
             System.out.println("Yanlis girdiniz ");
