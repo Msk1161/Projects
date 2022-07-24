@@ -42,17 +42,5 @@ public class Soru {
     7. Eğer bitirmek istiyorsa ödeme kısmına geçiniz ve
   * ödeme sonrasında programı bitiriniz
   */
-    public static void main(String[] args) {
-        for (int i = 0; i < sarkuteriUrunler.size(); i++) {
-            //System.out.print((i + 1) + " " + sarkuteriUrunler.get(i) + " " + sarkuteriFiyatlar.get(i) + " TL");
-            System.out.printf(" %-4d  %-10s  %.3f\n", i, sarkuteriUrunler.get(i), sarkuteriFiyatlar.get(i));
-            // printf ("  0%-3.of  %-10s  % 4)
-            System.out.println("");
 
-            //% -10.10 S veya s
-            //  1. 10 karakter yer verir - isaretiyle sola veya saga yaslar
-            //  2. 10 karakter uzunlugu
-            //  3. S/s stringin buyuk kucuk olmasini saglar
-        }
     }
-}

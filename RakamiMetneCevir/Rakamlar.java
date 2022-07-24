@@ -19,9 +19,7 @@ public class Rakamlar {
             yeniArrUzunluk=arr[i].length;
 
         }
-        System.out.println("yeniArrUzunluk : " + yeniArrUzunluk);
-
-        int[] newArr=new int[3];
+        int[] newArr=new int[yeniArrUzunluk+1];
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
