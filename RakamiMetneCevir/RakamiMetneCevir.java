@@ -15,14 +15,14 @@ public class RakamiMetneCevir {
         String[] yuz= {"","yuz","ikiyuz","ucyuz","dortyuz","besyuz","altiyuz","yediyuz","sekizyuz","dokuzyuz" };
 
         Scanner scan = new Scanner(System.in);
-        System.out.print("Lutfen bir sayi giriniz : "); //735
+        System.out.print("Lutfen bir sayi giriniz : "); //735298
         int sayi=scan.nextInt();
         int birler=sayi%10;  //5
         int onlar=(sayi/10)%10; // 3
-        int yuzler=(sayi/100)%10; //735
-        int binler=(sayi/1000)%10;
-        int onbinler=(sayi/10000)%10;
-        int yuzbinler=sayi/100000;
+        int yuzler=(sayi/100)%10; //7
+        int binler=(sayi/1000)%10; //2
+        int onbinler=(sayi/10000)%10; //9
+        int yuzbinler=sayi/100000; //8
 
         for (int i = 0; i <yuz.length ; i++) {
             if (yuzbinler==i){
@@ -32,9 +32,12 @@ public class RakamiMetneCevir {
             if (onbinler==i){
                 System.out.print(on[i]+"");
             }
-        }for (int i = 0; i <bir.length ; i++) {
-            if (binler==i){
-                System.out.print(bir[i]+"bin ");
+        }
+        if(sayi>=1000) {
+            for (int i = 0; i < bir.length; i++) {
+                if (binler == i) {
+                    System.out.print(bir[i] + "bin ");
+                }
             }
         }
         for (int i = 0; i <yuz.length ; i++) {
