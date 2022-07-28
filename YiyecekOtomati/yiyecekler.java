@@ -69,25 +69,25 @@ public class yiyecekler {
     }
     public static void odemeyeGit(String giris) {
         System.out.print("Odeme icin miktar giriniz : ");
+        int toplamTahsilat=0;
         tahsilat= scan.nextInt();
-        if(tahsilat<toplam1){
-            System.out.print("Yetersiz bakiye. En az "+(toplam1-tahsilat) + " $ daha odeme yapmalisiniz : ");
+        toplamTahsilat=toplamTahsilat+tahsilat;
+        if(toplamTahsilat<toplam1){
+            System.out.print("Yetersiz bakiye. En az "+(toplam1-toplamTahsilat) + " $ daha odeme yapmalisiniz : ");
             tahsilat= scan.nextInt();
-            tahsilat+=tahsilat;
-            if(tahsilat<toplam1){
-                System.out.print("Yetersiz bakiye. En az "+(toplam1-tahsilat) + " $ daha odeme yapmalisiniz : ");
+            toplamTahsilat=toplamTahsilat+tahsilat;
+            if(toplamTahsilat<toplam1){
+                System.out.print("Yetersiz bakiye. En az "+(toplam1-toplamTahsilat) + " $ daha odeme yapmalisiniz : ");
                 tahsilat= scan.nextInt();
-                tahsilat+=tahsilat;
+                toplamTahsilat=toplamTahsilat+tahsilat;
             }
-
         }
-
         System.out.println("No  Urun          Fiyat" + "\n--  -----------   ----- ");
                 for (int i = 0; i < sepetUrunler.size(); i++){
                     System.out.printf("%-3d %-13s %-3d $\n", (i + 1), sepetUrunler.get(i), sepetFiyatlar.get(i));
                 }
                 System.out.println("Toplam tutar......"+toplam1+"  $");
-                System.out.println("Odenen : " + tahsilat+ " $. Para ussu : "+(tahsilat- toplam1)+" $");
+                System.out.println("Odenen : " + toplamTahsilat+ " $. Para ussu : "+(toplamTahsilat- toplam1)+" $");
                 System.out.println("Iyi Gunler. Bizi tercih ettiginiz icin TESEKKURLER");
     }
 }
