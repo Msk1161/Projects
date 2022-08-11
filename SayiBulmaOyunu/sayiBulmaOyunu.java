@@ -6,15 +6,28 @@ import java.util.Scanner;
 import java.util.stream.IntStream;
 
 public class sayiBulmaOyunu {
+    /*
+    Amac: bilgisayarin random olarak hafizasinda olusturdugu 4 basamakli ve rakamlari bir-birinden farkli sayiyi bulma oyunu.
+     1- Bilgilendirme metni farkli bir txt dosyasindan ve bir methodla kullanici isterse gorecek
+        yada direk oyuna baslayacak
+     2- Bilgisayarin 4 basamakli ve rakamlari birbirinden farkli sayi uretmesini saglayacaz.
+     3- kulanicidan rakamlari birbirinden farkli 4 basamakli bir sayi alinir.
+     4- Kullanicidan alinan sayi ile Bilgisayarin hafizasinda tuttugu sayinin karsilastirmasi yapilir ve kullaniciya:
+        a. + , - (ornek: arti 2, eksi 1) seklinde donus yapilir.
+            Not: +2 bilinen ve yeri dogru sayilari
+                 -1 bilenen fakat yeri yanlis olan sayilari belirler.
+        b. Kullanicidan +4 olana kadar tekrar rakam alinir
+     5- En son kullaniciya kac seferde buldugu mesaji verilir.
+     */
     static int [] sayiArr =new int[4];
 
     public static void main(String[] args) {
         System.out.println("==== SAYI BULMA OYUNU ====\n" +
                 "Bilgisayar hafizasinda random olarak dort basamakli \n" +
-                "(1000 ile 9999 arasi) bir sayi tutacaktir.\n" +
+                "(1000 ile 9999 arasi) ve rakamlari birbirinden farkli bir sayi tutar.\n" +
                 "Kullanici her seferinde 4 basamakli sayi girerek bu sayiyi bulmaya calisacaktir.\n" +
-                "Girilen her sayi sonunda bilgisayar + (yeri dogru olan sayi adedini )\n" +
-                "ve - (yeri yanlis olan sayi adedini ) ile donus yapacaktir. ");
+                "Girilen her sayi sonunda bilgisayar + (yeri dogru olan sayi adedi )\n" +
+                "ve - (yeri yanlis olan sayi adedi ) ile donus yapacaktir. ");
         System.out.println("========= BASLIYOR ==========");
         sayiUret();
 
